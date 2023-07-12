@@ -10,9 +10,29 @@
 <body>
 <div class="container-fluid">
  <h1>Projeto JSP - Turma 2023</h1>
- <h1>Santos Campeão</h1>
+<div class="container">
+	<form action="form.jsp" method="post">
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Nome</label>
+	    <input type="text" class="form-control" name="nome" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+	    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+	  </div>
+	  <div class="mb-3">
+	    <label for="exampleInputPassword1" class="form-label">Senha	</label>
+	    <input type="password" class="form-control" name="senha" id="exampleInputPassword1">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Enviar</button>
+	</form>
+</div>
+<br><br>
+<hr>
+<% 
+ String nome = request.getParameter("nome");
+ out.print(nome+"<br><br>");
+%>
+
  <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-secondary">Secosndary</button>
 <button type="button" class="btn btn-success">Success</button>
 <button type="button" class="btn btn-danger">Danger</button>
 <button type="button" class="btn btn-warning">Warning</button>
